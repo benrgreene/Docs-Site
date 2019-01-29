@@ -1,0 +1,23 @@
+* {
+  font-family: $f-body;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $f-header;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h3 {
+  line-height: 50px;
+  font-size: 22px;
+}
+
+p {
+  line-height: 1.4;
+  letter-spacing: 0.4px;
+}

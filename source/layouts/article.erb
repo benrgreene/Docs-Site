@@ -1,6 +1,6 @@
 <%= partial "partials/header" %>
-<div class="content-wrapper">
-  <article class="post l-contain">
+<div class="content-wrapper l-contain">
+  <article class="post">
     <%# Page/Article Title %>
     <% if current_article.nil? %>
       <h1 class="post__title">SPA Documentation</h1>
@@ -8,6 +8,18 @@
       <h1 class="post__title"><%= current_article.title %></h1>
     <% end %>
     <div class="post__content"><%= current_article.body %></div>
+    <div class="post__pagination">
+      <div class="pagination pagination--prev">
+        <% if current_article.previous_article %>
+          <%= link_to "Previous Article: #{current_article.previous_article.title}", current_article.previous_article %>
+        <% end %>
+      </div>
+      <div class="pagination pagination--next">
+        <% if current_article.next_article %>
+          <%= link_to "Next Article: #{current_article.next_article.title}", current_article.next_article %>
+        <% end %>
+      </div>  
+    </div>
   </article>
   <%= partial "partials/sidebar" %>
 </div>
