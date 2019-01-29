@@ -1,0 +1,19 @@
+.content-wrapper {
+  @include media-from($break-menu) {
+    display: flex;
+    flex-direction: row-reverse;
+
+    article {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .sidebar {
+      padding: 10px 5px;
+      min-width: 300px;
+      flex-shrink: 0;
+      flex-grow: 1;
+    }
+  }
+}
+

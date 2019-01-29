@@ -1,8 +1,8 @@
-@import 'variables.scss';
-@import 'mixins.scss';
-@import 'resets.scss';
-@import 'typography.scss';
+@import '_variables.scss';
+@import '_mixins.scss';
+@import '_resets.scss';
+@import '_typography.scss';
 
-@import 'components/footer.scss';
-@import 'components/header.scss';
-@import 'components/layout.scss';
+@import 'components/_footer.scss';
+@import 'components/_header.scss';
+@import 'components/_layout.scss';
