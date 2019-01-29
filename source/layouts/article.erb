@@ -1,0 +1,14 @@
+<%= partial "partials/header" %>
+<div class="content-wrapper">
+  <article class="post l-contain">
+    <%# Page/Article Title %>
+    <% if current_article.nil? %>
+      <h1 class="post__title">SPA Documentation</h1>
+    <% else %>
+      <h1 class="post__title"><%= current_article.title %></h1>
+    <% end %>
+    <div class="post__content"><%= current_article.body %></div>
+  </article>
+  <%= partial "partials/sidebar" %>
+</div>
+<%= partial "partials/footer" %>
