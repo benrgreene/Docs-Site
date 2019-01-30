@@ -13,11 +13,11 @@ module ArticleHelpers
     # display everything in each category
     to_return = ""
     categories.each do |category|
-      to_return << "<dl class=\"category-dropdown\">"
+      to_return << "<dl class=\"category-dropdown\" data-category=\"#{category}\">"
       to_return << "<dt>#{category}</dt><dd>"
       all_articles.each do |article|
         if article.data.category == category
-          to_return << link_to(article.data.title, "/#{article.path}")
+          to_return << link_to(article.data.title, "/#{article.path}", data: { title: article.data.title })
         end
       end
       to_return << '</dd></dl>'

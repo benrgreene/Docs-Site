@@ -1,6 +1,6 @@
 <%= partial "partials/header" %>
 <div class="content-wrapper l-contain">
-  <article class="post">
+  <article class="post" data-category="<%= current_article.data.category %>" data-title="<%= current_article.data.title %>">
     <%# Page/Article Title %>
     <% if current_article.nil? %>
       <h1 class="post__title">SPA Documentation</h1>
