@@ -1,6 +1,6 @@
 ---
 title: Get Post
-date: 2019/1/2
+date: 2019/1/3
 category: API Endpoints
 ---
 

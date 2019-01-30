@@ -1,6 +1,6 @@
 ---
-title: Get Page of Post
-date: 2019/1/4
+title: Get Page of Posts
+date: 2019/1/5
 category: API Endpoints
 ---
 
