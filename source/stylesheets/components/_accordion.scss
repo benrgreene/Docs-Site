@@ -39,6 +39,11 @@
 
   a {
     display: block;
+    transition: margin-left .2s;
+
+    &:not(.active):hover {
+      margin-left: 15px;
+    }
   }
 
   .is-open + dd .active {
