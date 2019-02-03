@@ -6,10 +6,12 @@
   }
 
   @include media-from($break-menu) {
-    display: flex;
-    flex-direction: row-reverse;
+    display: grid;
+    grid-template-columns: 300px calc(100% - 300px);
 
     article {
+      grid-row-start: 1;
+      grid-column-start: 2;
       padding-top: 10px;
       padding-bottom: 10px;
       display: flex;
@@ -23,9 +25,9 @@
     }
 
     .sidebar {
+      grid-row-start: 1;
+      grid-column-start: 1;
       padding: 10px 5px;
-      min-width: 300px;
-      flex-shrink: 0;
 
       h3 {
         margin-bottom: 15px;
@@ -56,7 +58,41 @@
 
     &:hover {
       color: #FFF;
-      background-color: $c-dark;
+      background-color: $c-wine;
+    }
+  }
+}
+
+.form {
+  margin-top: 30px;
+
+  * {
+    display: block;
+  }
+
+  input, 
+  textarea {
+    margin-bottom: 40px;
+    padding: 5px 3px;
+    width: 100%;
+  }
+
+  textarea {
+    min-height: 100px;
+  }
+
+  button {
+    border: 2px solid $c-wine;
+    border-radius: 5px;
+    padding: 6px 10px;
+    background-color: $c-wine;
+    color: $c-pure-white;
+    -webkit-appearance: none;
+    transition: color .2s, background-color .2s;
+
+    &:hover {
+      background-color: $c-pure-white;
+      color: $c-wine;
     }
   }
 }
