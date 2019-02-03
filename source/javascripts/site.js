@@ -41,7 +41,7 @@ function closeAll(tiles, ignoreIndex) {
 function openCurrentAccordion () {
   let currentPost = document.querySelectorAll('.post[data-category]')
   // if there isn't a current post, bail.
-  if (!currentPost) { return }
+  if (0 == currentPost.length) { return }
   // get the category, and open the accordion
   let currentCategory  = currentPost[0].dataset.category
   let currentAccordion = document.querySelectorAll(`dl[data-category="${currentCategory}"] dt`)
